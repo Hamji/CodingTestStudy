@@ -21,11 +21,11 @@ public:
         }
         
         for (int i : sizes){
-            int rest = n - i;
-            result += (long long)i * (long long)rest;
+			n = n - i;
+            result += (long long)i * (long long)n;
         }
         
-        return result / 2;
+        return result;
     }
 
 	void dfs(int i, vector<vector<int>>& group, vector<bool>& visited, int& size){
